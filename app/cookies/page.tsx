@@ -16,7 +16,7 @@ const toc: TocItem[] = [
 
 export default function CookiesPage() {
   return (
-    <LegalLayout title="Cookie Policy" lastUpdated="May 2, 2026" toc={toc}>
+    <LegalLayout title="Cookie Policy" lastUpdated="January 5, 2026" toc={toc}>
       <h2 id="what-are-cookies">What Are Cookies?</h2>
       <p>
         Cookies are small text files placed on your device when you visit a website. They help

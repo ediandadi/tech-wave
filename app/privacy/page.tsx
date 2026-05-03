@@ -24,7 +24,7 @@ const toc: TocItem[] = [
 
 export default function PrivacyPage() {
   return (
-    <LegalLayout title="Privacy Policy" lastUpdated="May 2, 2026" toc={toc}>
+    <LegalLayout title="Privacy Policy" lastUpdated="January 5, 2026" toc={toc}>
       <p>
         Tech Wave Limited (&ldquo;Tech Wave,&rdquo; &ldquo;we&rdquo;) respects your privacy. This
         Policy explains how we handle personal data when you use our website or engage our services.
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
       <p>
         <strong>Tech Wave Limited</strong>
         <br />
-        [Address Placeholder], Lagos, Nigeria
+        3 Boge Gbaga Pipeline, Ikorodu, Lagos, Nigeria
         <br />
         Email:{" "}
         <a href="mailto:privacy@techwave.ng">privacy@techwave.ng</a>

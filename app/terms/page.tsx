@@ -27,7 +27,7 @@ const toc: TocItem[] = [
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms and Conditions" lastUpdated="May 2, 2026" toc={toc}>
+    <LegalLayout title="Terms and Conditions" lastUpdated="January 5, 2026" toc={toc}>
       <h2 id="introduction">1. Introduction</h2>
       <p>
         These Terms govern your use of the Tech Wave website and services provided by Tech Wave
@@ -170,7 +170,7 @@ export default function TermsPage() {
       <p>
         <strong>Tech Wave Limited</strong>
         <br />
-        [Address Placeholder], Lagos, Nigeria
+        3 Boge Gbaga Pipeline, Ikorodu, Lagos, Nigeria
         <br />
         Email:{" "}
         <a href="mailto:legal@techwave.ng">legal@techwave.ng</a>

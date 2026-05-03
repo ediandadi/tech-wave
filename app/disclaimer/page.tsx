@@ -18,7 +18,7 @@ const toc: TocItem[] = [
 
 export default function DisclaimerPage() {
   return (
-    <LegalLayout title="Disclaimer" lastUpdated="May 2, 2026" toc={toc}>
+    <LegalLayout title="Disclaimer" lastUpdated="January 5, 2026" toc={toc}>
       <h2 id="general-information">General Information</h2>
       <p>
         The information on this website is for general informational purposes only. While we strive

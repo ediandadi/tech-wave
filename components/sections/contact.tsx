@@ -134,9 +134,9 @@ export function ContactSection({ variant = "section" }: ContactSectionProps) {
                 <div className="text-sm leading-relaxed text-[var(--foreground)]/85">
                   <div className="font-medium">Lagos, Nigeria</div>
                   <div className="text-[var(--muted-foreground)] mt-1">
-                    [Address Placeholder]
+                    3 Boge Gbaga Pipeline
                     <br />
-                    Victoria Island, Lagos
+                    Ikorodu, Lagos
                   </div>
                 </div>
               </div>
