@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: "Coordination", href: "/coordination" },
   { label: "Commodities", href: "/commodities" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Insights", href: "/insights" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -46,13 +46,18 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="flex h-16 sm:h-[72px] items-center justify-between gap-6">
           <div className="flex items-center gap-10">
-            <Logo />
+            <Logo onDark={!isSolid} />
             <nav className="hidden lg:flex items-center gap-8">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[13px] font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
+                  className={cn(
+                    "text-[13px] font-medium transition-colors",
+                    isSolid
+                      ? "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                      : "text-[#F0EBE0]/75 hover:text-[#F0EBE0]"
+                  )}
                 >
                   {link.label}
                 </Link>
@@ -73,7 +78,12 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
             </Link>
             <button
               type="button"
-              className="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-sm border border-[var(--border)] text-[var(--foreground)]"
+              className={cn(
+                "lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-sm border transition-colors",
+                isSolid
+                  ? "border-[var(--border)] text-[var(--foreground)]"
+                  : "border-[#F0EBE0]/30 text-[#F0EBE0]"
+              )}
               onClick={() => setMobileOpen((o) => !o)}
               aria-label="Open menu"
               aria-expanded={mobileOpen}

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "15+", label: "Commodities sourced" },
+  { value: "15+", label: "Commodities in catalog" },
   { value: "4", label: "Countries of operation" },
-  { value: "200+", label: "Verified producers in network" },
-  { value: "120+", label: "Shipments coordinated" },
+  { value: "Origin", label: "Verified at the source" },
+  { value: "End-to-end", label: "Documentation & logistics" },
 ];
 
 const VALUES = [

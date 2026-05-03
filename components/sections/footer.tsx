@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Linkedin, XIcon } from "@/components/icons";
 import { Logo } from "@/components/logo";
 import { Container } from "@/components/ui/container";
 
@@ -16,7 +15,7 @@ const COLUMNS = [
     title: "Coordination",
     links: [
       { label: "Trade Coordination", href: "/coordination" },
-      { label: "Insights", href: "/insights" },
+      { label: "Verification", href: "/coordination#verification" },
     ],
   },
   {
@@ -82,30 +81,10 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-[#2A322C] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="mt-16 pt-8 border-t border-[#2A322C]">
             <p className="text-xs text-[#F0EBE0]/45">
               © 2026 Tech Wave Limited · Built in Lagos. Operating across West Africa.
             </p>
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Tech Wave on LinkedIn"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-[#2A322C] text-[#F0EBE0]/60 hover:text-[#F0EBE0] hover:border-[#F0EBE0]/30 transition-colors"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Tech Wave on X"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-[#2A322C] text-[#F0EBE0]/60 hover:text-[#F0EBE0] hover:border-[#F0EBE0]/30 transition-colors"
-              >
-                <XIcon className="h-3.5 w-3.5" />
-              </a>
-            </div>
           </div>
         </div>
       </Container>

@@ -96,8 +96,8 @@ export default function SourcingPage() {
                       <div className="text-[10px] uppercase tracking-[0.18em] mt-1">Commodities</div>
                     </div>
                     <div>
-                      <div className="font-serif text-2xl text-[var(--foreground)]">200+</div>
-                      <div className="text-[10px] uppercase tracking-[0.18em] mt-1">Producers</div>
+                      <div className="font-serif text-2xl text-[var(--foreground)]">Origin</div>
+                      <div className="text-[10px] uppercase tracking-[0.18em] mt-1">Verified</div>
                     </div>
                     <div>
                       <div className="font-serif text-2xl text-[var(--foreground)]">4</div>

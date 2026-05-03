@@ -28,7 +28,7 @@ const TRUST_ELEMENTS = [
   },
 ];
 
-const PARTNERS = ["SGS", "Bureau Veritas", "NEPC", "Maersk", "DHL Global", "MSC"];
+// no hardcoded partner list — describe capability, not relationships
 
 export function TrustSection() {
   return (
@@ -64,21 +64,16 @@ export function TrustSection() {
           })}
         </div>
 
-        {/* Partner strip */}
-        <div className="mt-16">
-          <p className="text-center text-[10px] uppercase tracking-[0.25em] text-[var(--muted-foreground)] font-medium mb-6">
-            Working with
+        {/* Capability statement */}
+        <div className="mt-14 max-w-3xl mx-auto text-center">
+          <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--muted-foreground)] font-medium mb-4">
+            How we work
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            {PARTNERS.map((partner) => (
-              <div
-                key={partner}
-                className="font-serif text-lg font-medium tracking-tight text-[var(--muted-foreground)]/70 hover:text-[var(--foreground)] transition-colors"
-              >
-                {partner}
-              </div>
-            ))}
-          </div>
+          <p className="text-[15px] leading-relaxed text-[var(--muted-foreground)]">
+            Inspection by accredited third parties. Export documentation through standard
+            international channels. Logistics with major global carriers. We work with the
+            partners and protocols our clients already trust.
+          </p>
         </div>
       </Container>
     </Section>

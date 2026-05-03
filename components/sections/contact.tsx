@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Mail, MapPin } from "lucide-react";
-import { Linkedin } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea, Label, Select } from "@/components/ui/input";
 import { Container } from "@/components/ui/container";
@@ -175,20 +174,6 @@ export function ContactSection({ variant = "section" }: ContactSectionProps) {
               </a>
             </div>
 
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--muted-foreground)] font-medium mb-3">
-                Follow
-              </p>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Tech Wave on LinkedIn"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[var(--foreground)]/30 transition-colors"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-            </div>
           </div>
         </aside>
       </div>

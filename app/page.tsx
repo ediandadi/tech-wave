@@ -7,7 +7,6 @@ import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { CoordinationModelSection } from "@/components/sections/coordination-model";
 import { TrustSection } from "@/components/sections/trust";
 import { AudienceSection } from "@/components/sections/audience";
-import { InsightsSection } from "@/components/sections/insights";
 import { AboutSection } from "@/components/sections/about";
 import { CtaSection } from "@/components/sections/cta";
 import { ContactSection } from "@/components/sections/contact";
@@ -26,7 +25,6 @@ export default function Home() {
         <CoordinationModelSection />
         <TrustSection />
         <AudienceSection />
-        <InsightsSection />
         <AboutSection />
         <CtaSection />
         <ContactSection />
