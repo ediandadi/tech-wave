@@ -2,11 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { LogIn, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LoginDialog } from "@/components/login-dialog";
 
 const NAV_LINKS = [
   { label: "Sourcing", href: "/sourcing" },
@@ -24,6 +25,7 @@ interface NavbarProps {
 export function Navbar({ variant = "transparent" }: NavbarProps) {
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [loginOpen, setLoginOpen] = React.useState(false);
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -34,7 +36,13 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
 
   const isSolid = variant === "solid" || scrolled;
 
+  const openLogin = () => {
+    setMobileOpen(false);
+    setLoginOpen(true);
+  };
+
   return (
+    <>
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
@@ -64,18 +72,35 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <div className="hidden sm:block">
               <ThemeToggle />
             </div>
             <Link
               href="/contact"
-              className="hidden sm:inline-flex"
+              className="hidden md:inline-flex"
             >
-              <Button variant="primary" size="sm">
+              <Button
+                size="sm"
+                className={cn(
+                  "border transition-colors",
+                  isSolid
+                    ? "bg-transparent border-[var(--foreground)]/25 text-[var(--foreground)] hover:border-[var(--foreground)]/50 hover:bg-[var(--foreground)]/[0.03]"
+                    : "bg-transparent border-[#F0EBE0]/40 text-[#F0EBE0] hover:bg-white/10 hover:border-[#F0EBE0]/70"
+                )}
+              >
                 Request Access
               </Button>
             </Link>
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={openLogin}
+              className="hidden sm:inline-flex shadow-sm"
+            >
+              <LogIn className="h-4 w-4" strokeWidth={1.5} />
+              Login
+            </Button>
             <button
               type="button"
               className={cn(
@@ -107,18 +132,24 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-3 flex items-center justify-between gap-3">
+              <div className="pt-3 flex items-center gap-2">
                 <ThemeToggle />
                 <Link href="/contact" onClick={() => setMobileOpen(false)} className="flex-1">
-                  <Button variant="primary" size="sm" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full">
                     Request Access
                   </Button>
                 </Link>
+                <Button variant="primary" size="sm" className="flex-1" onClick={openLogin}>
+                  <LogIn className="h-4 w-4" strokeWidth={1.5} />
+                  Login
+                </Button>
               </div>
             </nav>
           </div>
         </div>
       )}
     </header>
+    <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
+    </>
   );
 }
