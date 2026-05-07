@@ -147,6 +147,8 @@ export function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
                     I have read and agreed to the{" "}
                     <Link
                       href="/terms"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-medium text-[var(--foreground)] underline underline-offset-2 hover:text-[var(--secondary)] transition-colors"
                     >
                       Terms &amp; Conditions
@@ -154,6 +156,8 @@ export function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
                     and{" "}
                     <Link
                       href="/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-medium text-[var(--foreground)] underline underline-offset-2 hover:text-[var(--secondary)] transition-colors"
                     >
                       Privacy Policy
